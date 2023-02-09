@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@100;400&display=swap');
+/* font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/* Por buenas prácticas, estilos los debo organizar por categorías:
+1. Posicionamiento
+2. Modelo de caja (box model)
+3. Tipografía
+4. Visuales
+5. Otros */
+
+/* Leer y aplicar BEM
+https://intelygenz.medium.com/how-to-organize-your-css-with-oocss-bem-smacss-a2317fa083a7 */
+
+:root {
+    --yellow: #FFBA08;
+    --orange: #F48C06;
+    --red: #DC2F02;
+    --gray1: #797878;
+    --gray2: #333333;
+    --black: #121212
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--black);
+}
+
+.container {
+    width: 60%;
+    height: 284px;
+    background: var(--gray2);
+    padding: 12px;
+    margin: 48px;
+    font-size: 1.6rem;
+}
+
+p {
+    color: var(--gray1);
+
+}
+
+.esquina1 {
+    width: 36px;
+    height: 64px;
+    background: var(--yellow);
+    border-radius: 32px 0 0 32px;
+}
+
+.esquina2 {
+    width: 36px;
+    height: 64px;
+    background: var(--orange);
+    border-radius: 32px 0 0 32px;
+}
+
+.esquina3 {
+    width: 36px;
+    height: 64px;
+    background: var(--red);
+    border-radius: 32px 0 0 32px;
+}

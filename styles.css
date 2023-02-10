@@ -38,22 +38,17 @@ html {
     color: var(--gray1);
 }
 
-.timescales-container {
+.timescaleS-grid {
     display: grid;
     grid-template-columns: 1fr;
-    /* grid-template-rows: 4fr;  */
-    /* grid-template-rows: 10rem 20rem 40rem 5rem; */
     grid-template-rows: 32% 16% 36% 16%;
-    /* grid-template: 1 / 4; */
-
-    height: 90vh;
+    height: 85vh;
     margin: 5vh 8vh;
 }
 
-.timescale {
+.timescale-container {
     display: flex;
     justify-content: space-between;
-    /* flex-grow: 2; */
     margin: 2rem 8rem;
 }
 
@@ -88,8 +83,6 @@ html {
 .timescale__info {
     display: grid;
     grid-template-columns: 10% 20% 40% 5% 25%;
-    align-items: flex-end;
-    justify-items: end;
     width: 100%;
     background: var(--gray2);
 }
@@ -97,24 +90,26 @@ html {
 .timescale__milestone {
     display: grid;
     grid-template-rows: 85% 15%;
-    border-right: 2.5px dashed var(--gray1);
-    height: 100%;
     align-items: flex-end;
     justify-items: flex-end;
+    border-right: 2.5px dashed var(--gray1);
 }
 
 .timescale__milestone-text-year {
     display: grid;
     transform: rotate(180deg);
-    writing-mode: vertical-lr;
+    writing-mode: vertical-rl;
     justify-items: flex-start;
-    margin: 1rem 1rem;
-    height: 10rem;
+    margin: 0.5rem 1rem 0 0;
+    height: 95%;
     font-size: 1.2rem;
 }
 
 .timescale__milestone-percent {
-    font-size: 1.6rem;
     margin: 0 1rem 1rem 0;
+    font-size: 1.6rem;
 }
 
+.final-milestone {
+    display: none;
+}

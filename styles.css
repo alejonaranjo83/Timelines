@@ -2,15 +2,19 @@
 /* font-family: 'Inter', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
-/* Por buenas prácticas, estilos los debo organizar por categorías:
-1. Posicionamiento
-2. Modelo de caja (box model)
-3. Tipografía
-4. Visuales
-5. Otros */
+/* Good practices for ordering styles:
+1. Position
+2. Box model
+3. Typography
+4. Visuals
+5. Others */
 
-/* Leer y aplicar BEM
+/* Use BEM as an architecture metod for naming
 https://intelygenz.medium.com/how-to-organize-your-css-with-oocss-bem-smacss-a2317fa083a7 */
+
+/* https://en.bem.info/methodology/naming-convention/ */
+
+/* Use REM in order to avoid troubles with screens of differents sizes */
 
 :root {
     --yellow: #FFBA08;
@@ -31,39 +35,102 @@ html {
     font-size: 62.5%;
     font-family: 'Inter', sans-serif;
     background-color: var(--black);
-}
-
-.container {
-    width: 60%;
-    height: 284px;
-    background: var(--gray2);
-    padding: 12px;
-    margin: 48px;
-    font-size: 1.6rem;
-}
-
-p {
     color: var(--gray1);
-
 }
 
-.esquina1 {
+.timescales-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 4fr;  */
+    /* grid-template-rows: 10rem 20rem 40rem 5rem; */
+    grid-template-rows: 32% 16% 36% 16%;
+    
+    /* grid-template: 1 / 4; */
+
+    height: 90vh;
+    margin: 5vh 8vh;
+}
+
+.timescale {
+    display: flex;
+    justify-content: space-between;
+    /* flex-grow: 2; */
+    margin: 2rem 8rem;
+}
+
+.timescale__corner-left {
     width: 36px;
-    height: 64px;
+    height: 100%;
+    border-radius: 32px 0 0 32px;
+}
+
+.timescale__corner-right {
+    width: 36px;
+    height: 100%;
+    border-radius: 0 32px 32px 0;
+}
+
+.grayColor {
+    background: var(--gray2);
+}
+
+.yellowColor {
     background: var(--yellow);
-    border-radius: 32px 0 0 32px;
 }
 
-.esquina2 {
-    width: 36px;
-    height: 64px;
+.orangeColor {
     background: var(--orange);
-    border-radius: 32px 0 0 32px;
 }
 
-.esquina3 {
-    width: 36px;
-    height: 64px;
+.redColor {
     background: var(--red);
-    border-radius: 32px 0 0 32px;
+}
+
+.timescale__info {
+    display: grid;
+    grid-template-columns: 10% 20% 40% 5% 25%;
+    align-items: flex-end;
+    justify-items: end;
+    width: 100%;
+    background: var(--gray2);
+}
+
+/* .timescale__milestone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+} */
+
+
+.timescale__milestone {
+    display: grid;
+    /* flex-direction: column;
+    align-items: flex-end; */
+}
+
+.timescale__milestone-text-year {
+    display: grid;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    justify-items: flex-start;
+    align-items: center;
+    margin: 1rem 1rem;
+    height: 10rem;
+}
+
+.timescale__milestone-percent {
+    font-size: 2rem;
+    margin: 0 1rem 1rem 0;
+}
+
+.timescale__milestone-line {
+    display: grid;
+    transform: rotate(90deg);
+    writing-mode: vertical-lr;
+    justify-items: flex-start;
+    /* height: 3rem; */
+    /* transform: rotate(90deg); */
+    border: 4px solid var(--gray1);
+    /* grid-column: 1 / 2;
+    grid-row: 1 / 2; */
 }

@@ -159,3 +159,48 @@ html {
 .final-milestone {
     display: none;
 }
+
+.connection-right {
+    grid-column: 3;
+    grid-row: 2 / 4;
+    margin-top: 65%;
+    width: 50%;
+    border-top: 6px dotted var(--yellow);
+    border-right: 6px dotted var(--yellow);
+    border-bottom: 6px dotted var(--yellow);
+    border-radius: 0 1.6rem 1.6rem 0;
+}
+
+.connection-bottom {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    width: 100%;
+    border-bottom: 6px dotted var(--yellow);
+}
+
+/* Haven´t solve the connection between the bottom line and the left connector as I´ll expect*/
+
+/* option1 */
+.connection-left {
+    margin-left: 50%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin-bottom: 35%;
+    width: 50%;
+    margin-top: -6px;
+    border-top: 6px dotted var(--yellow) ;
+    border-left: 6px dotted var(--yellow);
+    border-bottom: 6px dotted var(--yellow);
+    border-radius: 1.6rem 0 0 1.6rem;
+}
+
+/* option2 */
+/* .connection-left {
+    margin-left: 50%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin-bottom: 45%;
+    width: 50%;
+    border-radius: 1.6rem 0 0 1.6rem;
+    outline: 6px dotted var(--yellow);
+} */

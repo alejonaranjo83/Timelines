@@ -55,6 +55,9 @@ html {
 }
 
 .timescale__corner-left {
+    display: grid;
+    align-content: space-around;
+    justify-content: center;
     position: relative;
     right: 3.6rem;
     grid-column-start: 2;
@@ -65,7 +68,19 @@ html {
     box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.16);
 }
 
+.timescale__corner-left p {
+    rotate: -90deg;
+    width: 9rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+
 .timescale__corner-right {
+    display: grid;
+    align-content: space-around;
+    justify-content: center;
     grid-column: 3;
     grid-row: 2 / 3;
     width: 36px;
@@ -74,8 +89,21 @@ html {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.16);
 }
 
+.timescale__corner-right p {
+    rotate: -90deg;
+    width: 9rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+
 .grayColor {
     background: var(--gray2);
+}
+
+.grayColor p {
+    color: var(--gray1);
 }
 
 .yellowColor {

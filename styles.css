@@ -21,8 +21,10 @@ https://intelygenz.medium.com/how-to-organize-your-css-with-oocss-bem-smacss-a23
     --orange: #F48C06;
     --red: #DC2F02;
     --gray1: #797878;
-    --gray2: #333333;
-    --black: #121212
+    /* --gray2: #333333; */
+    --gray2: #282623;
+    /* --black: #121212; */
+    --black: #201E1C
 }
 
 * {
@@ -49,7 +51,7 @@ html {
 .timescale-container {
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 15% 70% 15%;
+    grid-template-rows: 10% 80% 10%;
 }
 
 .timescale__corner-left {
@@ -60,16 +62,16 @@ html {
     width: 36px;
     height: 100%;
     border-radius: 32px 0 0 32px;
-
+    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.16);
 }
 
 .timescale__corner-right {
+    grid-column: 3;
+    grid-row: 2 / 3;
     width: 36px;
     height: 100%;
     border-radius: 0 32px 32px 0;
-    
-    grid-column: 3;
-    grid-row: 2 / 3;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.16);
 }
 
 .grayColor {
@@ -89,13 +91,13 @@ html {
 }
 
 .timescale__info {
+    display: grid;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-
-    display: grid;
     grid-template-columns: 10% 20% 40% 5% 25%;
     width: 100%;
     background: var(--gray2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
 }
 
 .timescale__milestone {
@@ -107,47 +109,23 @@ html {
     border-right: 2.5px dashed var(--gray1);
 }
 
-/* .timescale__milestone-text-year {
-    background-color: rgba(255, 166, 0, 0.281);
-    display: grid;
-
-    grid-template-rows: 90% 10%;
-    grid-template-columns: 1fr;
-
-    align-items: flex-end;
-    justify-items: flex-end;
-
-    transform-origin: bottom left;
-    transform: rotate(-90deg);
-
-    width: 100%;
-    height: 100%;
-
-} */
-
-/* text-overflow: ellipsis;
-overflow: hidden;
-white-space: nowrap; */
-
 .timescale__milestone-text-year {
-    background-color: rgba(255, 166, 0, 0.281);
-    display: flex;
-    flex-direction: column;
-    /* transform-origin: bottom left;
-    transform: rotate(-90deg); */
-    align-items: flex-end;
-    justify-items: flex-end;
-}
-
-
-.timescale__milestone-text, .timescale__milestone-year {
-    transform-origin: bottom left;
-    transform: rotate(-90deg) ;
+    position: relative;
+    rotate: -90deg;
+    bottom: 1.8rem;
+    right: -1.5rem;
+    width: 7rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .timescale__milestone-percent {
-    margin: 0 1rem 1rem 0;
-    font-size: 1.6rem;
+    margin: 0 0.5rem 0.5rem 0;
+    font-size: 1.4rem;
 }
 
 .final-milestone {

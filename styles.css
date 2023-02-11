@@ -47,21 +47,29 @@ html {
 }
 
 .timescale-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 8rem;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 15% 70% 15%;
 }
 
 .timescale__corner-left {
+    position: relative;
+    right: 3.6rem;
+    grid-column-start: 2;
+    grid-row: 2 / 3;
     width: 36px;
     height: 100%;
     border-radius: 32px 0 0 32px;
+
 }
 
 .timescale__corner-right {
     width: 36px;
     height: 100%;
     border-radius: 0 32px 32px 0;
+    
+    grid-column: 3;
+    grid-row: 2 / 3;
 }
 
 .grayColor {
@@ -81,6 +89,9 @@ html {
 }
 
 .timescale__info {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
     display: grid;
     grid-template-columns: 10% 20% 40% 5% 25%;
     width: 100%;
@@ -89,20 +100,49 @@ html {
 
 .timescale__milestone {
     display: grid;
+    grid-row: 1 / 2;
     grid-template-rows: 85% 15%;
     align-items: flex-end;
     justify-items: flex-end;
     border-right: 2.5px dashed var(--gray1);
 }
 
-.timescale__milestone-text-year {
+/* .timescale__milestone-text-year {
+    background-color: rgba(255, 166, 0, 0.281);
     display: grid;
-    transform: rotate(180deg);
-    writing-mode: vertical-rl;
-    justify-items: flex-start;
-    margin: 0.5rem 1rem 0 0;
-    height: 95%;
-    font-size: 1.2rem;
+
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 1fr;
+
+    align-items: flex-end;
+    justify-items: flex-end;
+
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+
+    width: 100%;
+    height: 100%;
+
+} */
+
+/* text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap; */
+
+.timescale__milestone-text-year {
+    background-color: rgba(255, 166, 0, 0.281);
+    display: flex;
+    flex-direction: column;
+    /* transform-origin: bottom left;
+    transform: rotate(-90deg); */
+    align-items: flex-end;
+    justify-items: flex-end;
+}
+
+
+.timescale__milestone-text, .timescale__milestone-year {
+    transform-origin: bottom left;
+    transform: rotate(-90deg) ;
 }
 
 .timescale__milestone-percent {

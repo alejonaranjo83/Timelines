@@ -75,6 +75,7 @@ html {
     font-size: 2rem;
     font-weight: 700;
     color: black;
+    z-index: 2;
 }
 
 .timescale__corner-right {
@@ -87,6 +88,7 @@ html {
     height: 100%;
     border-radius: 0 32px 32px 0;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.16);
+    z-index: 2;
 }
 
 .timescale__corner-right p {
@@ -164,11 +166,12 @@ html {
     grid-column: 3;
     grid-row: 2 / 4;
     margin-top: 65%;
+    z-index: 0;
     width: 50%;
     border-top: 6px dotted var(--yellow);
     border-right: 6px dotted var(--yellow);
     border-bottom: 6px dotted var(--yellow);
-    border-radius: 0 1.6rem 1.6rem 0;
+    border-radius: 0 2.4rem 2.4rem 0;
 }
 
 .connection-bottom {
@@ -191,7 +194,7 @@ html {
     border-top: 6px dotted var(--yellow) ;
     border-left: 6px dotted var(--yellow);
     border-bottom: 6px dotted var(--yellow);
-    border-radius: 1.6rem 0 0 1.6rem;
+    border-radius: 2.4rem 0 0 2.4rem;
 }
 
 /* option2 */
@@ -204,3 +207,35 @@ html {
     border-radius: 1.6rem 0 0 1.6rem;
     outline: 6px dotted var(--yellow);
 } */
+
+.connection-right-border-orange {
+    border-right:6px dotted var(--orange);
+    border-top:6px dotted var(--orange);
+    border-bottom:6px dotted var(--orange);
+}
+
+.border-bottom-orange {
+    border-bottom:6px dotted var(--orange);
+}
+
+.connection-left-border-orange {
+    border-left:6px dotted var(--orange);
+    border-top:6px dotted var(--orange);
+    border-bottom:6px dotted var(--orange);
+}
+
+.connection-right-border-red {
+    border-right:6px dotted var(--red);
+    border-top:6px dotted var(--red);
+    border-bottom:6px dotted var(--red);
+}
+
+.connection-bottom-border-red {
+    border-bottom:6px dotted var(--red);
+}
+
+.connection-left-border-red {
+    border-left:6px dotted var(--red);
+    border-top:6px dotted var(--red);
+    border-bottom:6px dotted var(--red);
+}

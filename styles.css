@@ -389,3 +389,184 @@ html {
     height: 24rem;
     font-size: 1.4rem;
 }
+
+
+
+
+/* SCREEN: Personal timeline */
+
+/* Needs to rearrenge containers... bigger height space for parameters */
+.personal {
+    width: 95%;
+    height: 100vh;
+    margin: 20vh 5vh 0 5vh;
+}
+
+.personal h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 8rem;
+    font-weight: 100;
+    margin-bottom: 5vh;
+    width: 50%;
+}
+
+.personal-descrip {
+    display: flex;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.personal-descrip p {
+    width: 50rem;
+    margin-right: 1rem;
+}
+
+.personal-grid {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    width: 100%;
+}
+
+.personal-container {
+    display: grid;
+    margin-top: 6rem;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    grid-template-rows: 6rem 16rem 6rem;
+    width: 100%;
+}
+
+.personal__corner-left {
+    display: grid;
+    align-content: space-around;
+    justify-content: center;
+    position: relative;
+    right: 3.6rem;
+    grid-column-start: 2;
+    grid-row: 2 / 3;
+    width: 36px;
+    height: 100%;
+    border-radius: 32px 0 0 32px;
+    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.16);
+    background: var(--gray1);
+}
+
+.personal__corner-left p {
+    rotate: -90deg;
+    width: 9rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    z-index: 2;
+}
+
+.personal__timeline {
+    border: 3px solid var(--gray1);
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    grid-template-columns: 10% 20% 40% 5% 25%;
+    width: 100%;
+    /* background: var(--gray2); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.personal__corner-right {
+    display: grid;
+    align-content: space-around;
+    justify-content: center;
+    grid-column: 3;
+    grid-row: 2 / 3;
+    width: 36px;
+    height: 100%;
+    border-radius: 0 32px 32px 0;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.16);
+    z-index: 2;
+    background: var(--gray1);
+}
+
+.personal__corner-right p {
+    rotate: -90deg;
+    width: 9rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+
+.personal-param {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 100%;
+    padding: 0 10% 0 0;
+    margin: 2rem 2rem 0 0;
+}
+
+.personal-param__name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 3.2rem;
+    margin-bottom: 8rem;
+    height: 4rem;
+}
+
+.personal-param__paragraph {
+    margin-top: 1.2rem;
+    width: 100%;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    /* max-height: 12rem; */
+    height: 24rem;
+    font-size: 1.4rem;
+}
+
+.personal-param__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-param__form input {
+    background: var(--gray2);
+    border: 1px solid var(--gray1);
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    color: var(--gray1);
+    padding: 0.5rem 1.5rem;
+}
+
+.personal-param__form-name {
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+.personal-param__form-date {
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+.personal-param__form button {
+    margin-top: 2rem;
+    font-weight: 300;
+    font-size: 2.2rem;
+    width: 60%;
+    height: 5rem;
+    border-radius: 2rem;
+    background: var(--orange);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+    align-self: center;
+}
+
+
+
+
+/* SCREEN: Future thinking */
+
+
+
+
+
+

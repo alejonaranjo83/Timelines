@@ -40,6 +40,10 @@ html {
     color: var(--gray1);
 }
 
+.inactive {
+    display: none;
+}
+
 
 
 /* SCREEN: Cover */
@@ -139,6 +143,7 @@ html {
 /* SCREEN: Timelines */
 .main-grid {
     display: grid;
+    /* display: none; */
     grid-template-areas: 
         "timelines"
         "aside";

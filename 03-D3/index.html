@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-line=1.0">
-    <title>Timelines</title>
+    <title>Timelines D3</title>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
@@ -39,13 +39,14 @@
     </section>
     
     <main class="main-grid">
-        <!-- Missing the setting of functions when clicking or hovering... expanding or tightening the grid + hidding aside when not clicking -->
         <section class="timelineS-grid">
             <article class="timeline-container">
                 <figure class="timeline__corner-left grayColor">
                     <p>13.8 B</p>
                 </figure>
-                <ul class="timeline__info">
+                <div class="timeline__info" id="d3-tl1">
+                </div>
+                <!-- <ul class="timeline__info">
                     <li class="timeline__milestone">
                         <div class="timeline__milestone-text-year">
                             <p class="timeline__milestone-text">milestone 1 plus a complement</p>
@@ -81,7 +82,7 @@
                         </div>
                         <p class="timeline__milestone-percent">100%</p>
                     </li>
-                </ul>
+                </ul> -->
                 <figure class="timeline__corner-right yellowColor">
                     <p>TODAY</p>
                 </figure>
@@ -195,6 +196,7 @@
             <p>link´s to github and maybe twitter</p>
         </div> -->
     </footer>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

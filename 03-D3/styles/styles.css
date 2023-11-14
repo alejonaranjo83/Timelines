@@ -231,11 +231,23 @@ html {
     background: var(--red);
 }
 
-.timeline__info {
+/* "timeline__info" original without D3 */
+/* .timeline__info {
     display: grid;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     grid-template-columns: 10% 20% 40% 5% 25%;
+    width: 100%;
+    background: var(--gray2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+} */
+
+/* "timeline__info" modified for D3 */
+.timeline__info {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    /* grid-template-columns: 10% 20% 40% 20%; */
     width: 100%;
     background: var(--gray2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
